@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "perfect-python"
+version = "0.1.0"
+description = "Perfect Python using modern techniques as of 2021"
+authors = ["Srinivas Nyayapati <shireenrao@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = ""
+repository = ""
+keywords = ["perfect"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^8.0.1"
+requests = "^2.26.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.9b0"
+pytest = "^6.2.5"
+coverage = {extras = ["toml"], version = "^5.5"}
+pytest-cov = "^2.12.1"
+pytest-mock = "^3.6.1"
+flake8 = "^3.9.2"
+flake8-bandit = "^2.1.2"
+flake8-black = "^0.2.3"
+flake8-bugbear = "^21.9.1"
+flake8-import-order = "^0.18.1"
+safety = "^1.10.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+perfect-python = "perfect_python.console:main"
+
+[tools.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["perfect_python"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
