@@ -7,4 +7,4 @@ ignore = E203,E501,W503
 max-line-length = 80
 max-complexity = 10
 per-file-ignores =
-    tests/*:S101,D100,D103,D104
+    tests/*:S101
